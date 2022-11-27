@@ -18,7 +18,7 @@ const MovieCard = ({image, size}: MovieCardPropsType) => {
                        layout=""
                        style={{width: '100%', borderRadius: '4px'}}
                        src={image}
-                       alt={'مختار جان'}
+                       alt={''}
                 />
                 <Grid position={'absolute'}
                       top={0}
