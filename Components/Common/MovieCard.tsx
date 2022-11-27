@@ -6,10 +6,11 @@ import Image, {StaticImageData} from 'next/image'
 
 interface MovieCardPropsType {
     image: string | StaticImageData,
-    size: 'Horizontal' | 'Vertical'
+    size: 'Horizontal' | 'Vertical',
+    name:string
 }
 
-const MovieCard = ({image, size}: MovieCardPropsType) => {
+const MovieCard = ({image, size,name}: MovieCardPropsType) => {
     return (
         <Grid item xs={size === 'Horizontal' ? 3 : 1.5} borderRadius={1} p={1}>
             <Grid position={'relative'} borderRadius={1} sx={{cursor:'pointer'}}>
@@ -57,7 +58,7 @@ const MovieCard = ({image, size}: MovieCardPropsType) => {
                         </Grid>
                         <Grid color={'common.white'}>
                             <Typography>
-                                مختارنامه
+                                {name}
                             </Typography>
                         </Grid>
                     </Grid>
